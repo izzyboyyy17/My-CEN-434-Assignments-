@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matriculation Number Factorial</title>
+</head>
+<body>
+  <h1>Matriculation Number Factorial</h1>
+  <button onclick="calculateFactorial()">Calculate Factorial</button>
+  <p id="result"></p>
+
+  <script>
+    // Define the last 2 digits of the matriculation number
+    let matriculationNumber = 93;
+
+    // Function to calculate the factorial
+    function factorial(n) {
+      let result = 1;
+      for (let i = 1; i <= n; i++) {
+        result *= i;
+      }
+      return result;
+    }
+
+    // Function to calculate the factorial of the last 2 digits
+    function calculateFactorial() {
+      // Calculate the last 2 digits
+      let lastTwoDigits = matriculationNumber % 100;
+
+      // Calculate the factorial of each digit
+      let digit1 = Math.floor(lastTwoDigits / 10);
+      let digit2 = lastTwoDigits % 10;
+      let factorialOfDigit1 = factorial(digit1);
+      let factorialOfDigit2 = factorial(digit2);
+
+      // Display the result
+      document.getElementById("result").innerHTML = "The factorial of the first digit of your matriculation number is: " + factorialOfDigit1 + "<br>";
+      document.getElementById("result").innerHTML += "The factorial of the second digit of your matriculation number is: " + factorialOfDigit2;
+    }
+  </script>
+</body>
+</html>
