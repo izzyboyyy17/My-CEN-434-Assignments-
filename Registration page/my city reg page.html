@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .registration-form {
+            background-color: rgba(21, 213, 213, 0.927);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-top: 50px;
+        }
+
+        .registration-form h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .gender-options {
+        display: flex;
+        align-items: center;
+        }
+
+        .gender-options input[type="radio"] {
+        margin-right: 3px; 
+        }
+
+        .gender-options strong {
+        margin-left: 3px; 
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="city_football_club_logo.png" alt="City Football Club Logo" class="logo">
+        </div>
+        <div class="registration-form">
+            <h1>City Football Club Registration Form</h1>
+                <form action="/submit_registration" method="post">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="surname">Last Name:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <div class="gender-options">
+                            <input type="radio" name="gender" value="male"><strong>Male</strong>
+                            <input type="radio" name="gender" value="female" style="margin-left: 10px;"><strong>Female</strong>
+                        </div>
+                    </div>                   
+                
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                
+                    <div class="form-group">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+        </div>       
+    </div>
+</body>
+</html>
